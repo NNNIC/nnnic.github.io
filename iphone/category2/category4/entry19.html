@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="Shift_JIS" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>&quot;分岐サンプル&quot; Step-by-step チュートリアル</title>
+<meta name="keywords" content="StateGo,ソフトウェア開発,ビジュアルプログラミングツール" />
+<meta name="description" content="StateGoは、ゲーム開発から生まれた、様々なプログラミング言語に対応できるビジュアルプログラミングツールです。対応言語：   Typescript(Anguler), Bash, C, C++, C#, C#(Unity), VBA(Excel), Javascript, Rust, ティラノスクリプト, Visaul Basci, Win-bat, Delphi, Swift, PHP" />
+<link rel="stylesheet" href="../../styles.css" type="text/css" />
+<link rel="stylesheet" href="../../css/textstyles.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://statego.programanic.com/v2test/rss.xml" />
+
+</head>
+<body>
+<div id="wrapper">
+
+<header>
+<div id="top">
+<div class="inner">
+<h1>全てのプログラミング言語にビジュルプログラミング環境を</h1>
+<h2 class="title"><span><a href="../../">&quot;分岐サンプル&quot; Step-by-step チュートリアル</a></span></h2>
+</div>
+<input type="checkbox" id="panel" value="" />
+<label for="panel" id="topmenubtn">MENU</label>
+<div id="topmenubox"><div id="topmenubox-inner">
+<div id="topsubmenu">
+<span><a href="../../">ホーム</a></span>
+<span><a href="../../rss.xml">RSS購読</a></span>
+<span><a href="../../sitemap.html">サイトマップ</a></span>
+</div>
+</div></div>
+</div>
+<div id="headerbox">
+<div id="header"><img src="../../img/header.jpg" alt="&quot;分岐サンプル&quot; Step-by-step チュートリアル" /></div>
+</div>
+</header>
+<div id="column1">
+<div id="contents">
+<div id="layoutbox">
+<div id="main">
+<div id="siteNavi"><a href="../../">トップページ</a>  ＞ <a href="../../category2/">チュートリアル</a>  ＞ <a href="../../category2/category4/">Rust</a> ＞ &quot;分岐サンプル&quot; Step-by-step チュートリアル</div>
+
+<article>
+<div id="text1">
+
+<p>StateGoを理解して頂くために一ステップずつ解説するチュートリアルです。</p>
+<p>&nbsp;</p>
+<p>分岐処理を学習します。</p>
+<p>&nbsp;</p>
+<h4>プログラム仕様</h4>
+<p>&nbsp;</p>
+<p>これから作るプログラムの仕様は以下のとおりです。</p>
+<p>&nbsp;</p>
+<div class="nmlbox">
+<p>ランダムで１から１０の数字を一つ選択１の場合は"1st"２の場合は"2nd"３の場合は "3rd"４以降は "4th"と表現する。</p>
+<p>&nbsp;</p>
+<p>最終的に、 "You are XX." XXの部分に上記で作成した文字列が入る</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+<h3><span>準備</span></h3>
+<p>&nbsp;</p>
+<p>このチュートリアルは<a href="../../category2/category4/entry20.html">"Hello World" step-by-step チュートリアル</a>からの続きになります。準備が出来てない場合は、最初の記事から実践して下さい。</p>
+<p>&nbsp;</p>
+<h4>乱数の取得</h4>
+<p>&nbsp;</p>
+<p>汎用の新規ステートを作成します。GET_RANDというステート名を与えます。</p>
+<p>&nbsp;</p>
+<p>乱数を保持して、以降のステートで使うため、メンバ変数 "m_val" を定義します。Rustでのメンバ変数は、宣言と初期化が別々に行う必要があります。既に用意したテーブルの memberに宣言、member_initに初期化用の式を入力します。</p>
+<p>&nbsp;</p>
+<p>[member]</p>
+<div class="nmlbox graybg">
+<p>m_val : i32,</p>
+</div>
+<p>&nbsp;</p>
+<p>[member_init]</p>
+<div class="nmlbox graybg">
+<p>m_val : 0,</p>
+</div>
+<p>&nbsp;</p>
+<p>乱数関数 rand( a, b )を後から定義することとして、[init]に式を入力します。</p>
+<p>&nbsp;</p>
+<p>[update]</p>
+<div class="nmlbox graybg">
+<p>self.m_val = rand(1,10);</p>
+</div>
+<p>&nbsp;</p>
+<p><a href="https://statego.programanic.com/images/serius/rust_getrand.png"><img width=400px src="https://statego.programanic.com/images/serius/rust_getrand.png" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4>分岐の作成</h4>
+<p>&nbsp;</p>
+<p>取得した数字で分岐する必要があります。</p>
+<p>&nbsp;</p>
+<p>GET_RANDステートをクリックするとメニューが表示されます。分岐作成を選択します。</p>
+<p>&nbsp;</p>
+<p><a href="https://statego.programanic.com/images/serius/rust_b1.png"><img width=400px src="https://statego.programanic.com/images/serius/rust_b1.png" /></a></p>
+<p>&nbsp;</p>
+<p>分岐エディタが表示されます。</p>
+<p>&nbsp;</p>
+<p>ダイアログの空欄でクリックしてメニューを表示して、新規の分岐を作成します。分岐条件は、プログラム式を入力します。</p>
+<p>&nbsp;</p>
+<p>分岐ダイアログをOKで閉じるとステートに分岐ボックスが追加されます。</p>
+<p>&nbsp;</p>
+<p><a href="https://statego.programanic.com/images/serius/rust_b2.png"><img width=400px src="https://statego.programanic.com/images/serius/rust_b2.png" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4>分岐別の処理</h4>
+<p>&nbsp;</p>
+<p>分岐それぞれ用の処理を追加する。</p>
+<p>&nbsp;</p>
+<p><a href="https://statego.programanic.com/images/serius/rust_b3.png"><img width=400px src="https://statego.programanic.com/images/serius/rust_b3.png" /></a></p>
+<p>&nbsp;</p>
+<h4>変換</h4>
+<p>&nbsp;</p>
+<p>保存と変換ボタンを押し、hoge_control.rsに出力します。</p>
+<p>&nbsp;</p>
+<h4>rand関数の実装</h4>
+<p>&nbsp;</p>
+<p>rand関数が実装されていなため、このまま実行はできません。</p>
+<p>&nbsp;</p>
+<p>hoge_control.rsをエディタで開き、rand関数を実装します。ただし、StateGoの挿入部の中に実装すると変換時に削除されます。挿入マーカ―外で実装します。</p>
+<p>&nbsp;</p>
+<p>※組込関数で実装することも可能ですが、変換結果の挿入部以外で定義できることを習得することを目的とします。</p>
+<p>&nbsp;</p>
+<div class="nmlbox graybg">
+<p>fn rand(a: i32, b:  i32) -> i32 {let mut rng = rand::thread_rng();let n = b - a;return a + rng.gen_range(0,n+1);}</p></div>
+<p><a href="https://statego.programanic.com/images/serius/rust_b4.png"><img width=400px src="https://statego.programanic.com/images/serius/rust_b4.png" /></a></p>
+<p>&nbsp;</p>
+<p>使用するパッケージを指定します。</p>
+<div class="nmlbox graybg">
+<p>use rand::Rng;</p>
+</div>
+<p><a href="https://statego.programanic.com/images/serius/rust_b5.png"><img  width=400px src="https://statego.programanic.com/images/serius/rust_b5.png" /></a></p>
+<p>&nbsp;</p>
+<h4>実行</h4>
+<p>&nbsp;</p>
+<p>以下のコマンドを何度か実行して、正しくプログラムされていることを確認してください。</p>
+<p>&nbsp;</p>
+<div class="nmlbox graybg">
+<p>> cargo run</p>
+</div>
+<p>&nbsp;</p>
+<h4>アーカイブ</h4>
+<p>&nbsp;</p>
+<p><a href="https://github.com/NNNIC/psgg-rust-sample/tree/master/tutorial">psgg-rust-sample/tutorial</a></p>
+<p>&nbsp;</p>
+<h4>まとめ</h4>
+<p>&nbsp;</p>
+<p>ここでは以下のことが習得できました。</p>
+<p>&nbsp;</p>
+<p>1. メンバ変数の定義と初期化2. 分岐方法3. ファイルを変更しての実装方法</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>以上</p>
+<p>&nbsp;</p>
+</div>
+</article>
+
+<aside><div id="entrylist"><h4><span>関連ページ</span></h4>
+<dl>
+<div>
+<dt><span class="entry_title"><a href="../../category2/category4/entry18.html">新規作成からサンプル実行まで</a></span></dt>
+<dd>StateGoは、ゲーム開発から生まれた、様々なプログラミング言語に対応できるビジュアルプログラミングツールです。
+対応言語：   Typescript(Anguler), Bash, C, C++, C#, C#(Unity), VBA(Excel), Javascript, Rust, ティラノスクリプト, Visaul Basci, Win-bat, Delphi, Swift, PHP</dd>
+</div>
+<div>
+<dt><span class="entry_title"><a href="../../category2/category4/entry20.html">&quot;Hello World&quot; Step-by-step チュートリアル</a></span></dt>
+<dd>StateGoは、ゲーム開発から生まれた、様々なプログラミング言語に対応できるビジュアルプログラミングツールです。
+対応言語：   Typescript(Anguler), Bash, C, C++, C#, C#(Unity), VBA(Excel), Javascript, Rust, ティラノスクリプト, Visaul Basci, Win-bat, Delphi, Swift, PHP</dd>
+</div>
+</dl>
+</div></aside>
+
+</div>
+
+<div id="menu">
+
+<nav>
+<div class="menuitem">
+<h4>メニュー</h4>
+<div class="menubox menulist"><ul id="menu1">
+<li><a href="./en/index.html">English Page</a></li>
+<li><a href="../../entry2.html">ダウンロード</a></li>
+<li><a href="../../category3/">解説</a></li>
+<li><a href="../../category2/">チュートリアル</a></li>
+<li><a href="http://statego.programanic.com/tec3/tec_main_j.html">リファレンス</a></li>
+<li><a href="https://www.secure-cloud.jp/sf/1551614451aYEhBbzg">コンタクト</a></li>
+<li><a href="https://statego.programanic.com/policy/policy.htm">プライバシーポリシー</a></li>
+<li><a href="https://statego.programanic.com/lang-j/index.html">旧ホームページ</a></li>
+</ul></div>
+</div>
+
+</nav>
+<div class="title">最新記事</div>
+<div class="menubox"><ul id="newEntry">
+<li><a href="../../category2/category4/entry20.html">&quot;Hello World&quot; Step-by-step チュートリアル</a></li>
+<li><a href="../../category2/category4/entry19.html">&quot;分岐サンプル&quot; Step-by-step チュートリアル</a></li>
+<li><a href="../../category2/category4/entry18.html">新規作成からサンプル実行まで</a></li>
+<li><a href="../../category3/entry17.html">LOOPとGOSUB</a></li>
+<li><a href="../../category3/entry16.html">Visual Studio Codeとの連携</a></li>
+
+</ul></div>
+<div class="menubox"><div id="space4"><a class="twitter-timeline" data-height="400" data-theme="light" href="https://twitter.com/stategotool?ref_src=twsrc%5Etfw">Tweets
+by stategotool</a>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="pagetop"><a href="#wrapper">トップへ戻る</a></div>
+<footer id="footer">
+
+<div class="inner">
+<span><a href="../../sitemap.html">サイトマップ</a></span>
+<div class="desc">StateGoは、ゲーム開発から生まれた、様々なプログラミング言語に対応できるビジュアルプログラミングツールです。
+対応言語：   Typescript(Anguler), Bash, C, C++, C#, C#(Unity), VBA(Excel), Javascript, Rust, ティラノスクリプト, Visaul Basci, Win-bat, Delphi, Swift, PHP</div>
+<small>Copyright &copy; 2020 ビジュアルプログラミングツール StateGo　（準備中）All Rights Reserved.<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-120817443-1"></script>
+    <script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-120817443-1');
+		</script></small>
+   
+</div>
+
+</footer>
+
+</div>
+</body>
+</html>
