@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="Shift_JIS" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>%%%keywords%%%の検索結果-ビジュアルプログラミングツール StateGo</title>
+<meta name="keywords" content="%%%keywords%%%" />
+<meta name="description" content="%%%keywords%%%の検索結果" />
+<link rel="stylesheet" href="./styles.css" type="text/css" />
+<link rel="stylesheet" href="./css/textstyles.css" type="text/css" />
+
+
+
+<meta name="robots" content="noindex,follow" />
+</head>
+<body>
+<div id="wrapper">
+<header>
+<div id="top">
+<div class="inner">
+<h1>全てのプログラミング言語にビジュアルプログラミング環境を</h1>
+<h2 class="title"><span><a href="./">検索結果</a></span></h2>
+</div>
+<input type="checkbox" id="panel" value="" />
+<label for="panel" id="topmenubtn">MENU</label>
+<div id="topmenubox"><div id="topmenubox-inner">
+<div id="searchbox"><form name="search" id="search" method="Get" action="./search.php">
+<input type="search" Class="skwd" name="keyword" size="20" placeholder="検索" value="" />
+<input type="submit" value="検索" />
+</form></div>
+
+<div id="topsubmenu">
+<span><a href="./">ホーム</a></span>
+
+<span><a href="./sitemap.html">サイトマップ</a></span>
+</div>
+</div></div>
+</div>
+<div id="headerbox">
+<div id="header"><img src="./img/header.jpg" alt="ビジュアルプログラミングツール StateGo" /></div>
+</div>
+</header>
+
+<div id="column2">
+<div id="contents">
+<div id="layoutbox">
+<div id="main">
+<div id="siteNavi"><a href="./">トップページ</a> ＞ 検索結果</div>
+
+<h3><span>%%%keywords%%%の検索結果</span></h3>
+<div id="searchresult">
+%%%result%%%
+</div>
+
+</div>
+
+<div id="menu">
+
+<nav>
+<div class="menuitem">
+<h4>メニュー</h4>
+<div class="menubox menulist"><ul id="menu1">
+<li><a href="./">トップ</a></li>
+<li><a href="./entry2.html">ダウンロード</a></li>
+<li><a href="./entry25.html">利用ガイド</a></li>
+<li><a href="./category3/">解説</a></li>
+<li><a href="./category2/">チュートリアル</a></li>
+<li><a href="./category6/">サンプル</a></li>
+<li><a href="http://statego.programanic.com/tec3/tec_main_j.html">リファレンス</a></li>
+<li><a href="https://www.secure-cloud.jp/sf/1551614451aYEhBbzg">コンタクト</a></li>
+<li><a href="https://statego.programanic.com/policy/policy.htm">プライバシーポリシー</a></li>
+</ul></div>
+</div>
+
+</nav>
+
+<div class="title">最新記事</div>
+<div class="menubox"><ul id="newEntry">
+<li><a href="./category3/entry43.html">理解を強力サポート、サムネイルとリンク</a></li>
+<li><a href="./category6/entry41.html">PHP</a></li>
+<li><a href="./category6/entry40.html">Python</a></li>
+<li><a href="./category6/entry39.html">Swift</a></li>
+<li><a href="./category6/entry38.html">Delphi</a></li>
+
+</ul></div>
+<div class="menubox"><div id="space4"><a class="twitter-timeline" data-height="400" data-theme="light" href="https://twitter.com/stategotool?ref_src=twsrc%5Etfw">Tweets
+by stategotool</a>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div id="pagetop"><a href="#wrapper">トップへ戻る</a></div>
+
+<footer id="footer">
+
+<div class="inner">
+<span><a href="./sitemap.html">サイトマップ</a></span>
+<div class="desc">StateGoは、ゲーム開発から生まれた、様々なプログラミング言語に対応できるビジュアルプログラミングツールです。<br />対応言語：   Typescript(Anguler), Bash, C, C++, C#, C#(Unity), VBA(Excel), Javascript,Python, Rust, ティラノスクリプト, Visaul Basic, Win-bat, Delphi, Swift, PHP</div>
+<small>Copyright &copy; 2020 ビジュアルプログラミングツール StateGoAll Rights Reserved.<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=XXXXXXXXXXXX"></script>
+    <script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'XXXXXXXXXXXX');
+		</script></small>
+   
+</div>
+
+</footer>
+
+</div>
+</body>
+</html>

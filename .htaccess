@@ -1,0 +1,7 @@
+<ifModule mod_headers.c>
+Header Set Vary User-Agent
+</ifModule>
+
+RewriteEngine Off
+RewriteEngine On
+RewriteBase /

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<channel>
+		<title>ビジュアルプログラミングツール　ＳｔａｔｅＧｏ　（準備中）</title>
+		<link>https://statego.programanic.com/v2test/</link>
+		<description>ＳｔａｔｅＧｏは、ゲーム開発から生まれた、様々なプログラミング言語に対応できるビジュアルプログラミングツールです。
+対応言語：　　　Ｔｙｐｅｓｃｒｉｐｔ（Ａｎｇｕｌｅｒ），　Ｂａｓｈ，　Ｃ，　Ｃ＋＋，　Ｃ＃，　Ｃ＃（Ｕｎｉｔｙ），　ＶＢＡ（Ｅｘｃｅｌ），　Ｊａｖａｓｃｒｉｐｔ，　Ｒｕｓｔ，　ティラノスクリプト，　Ｖｉｓａｕｌ　Ｂａｓｃｉ，　Ｗｉｎ－ｂａｔ，　Ｄｅｌｐｈｉ，　Ｓｗｉｆｔ，　ＰＨＰ</description>
+		<language>ja</language>
+		<pubDate>Tue, 23 Jun 2020 21:51:31 +0900</pubDate>
+		<lastBuildDate>Tue, 23 Jun 2020 21:51:31 +0900</lastBuildDate>
+		<item>
+			<title>利用ガイド</title>
+			<link>https://statego.programanic.com/v2test/entry25.html</link>
+			<description><![CDATA[
+StateGoは、本業のゲーム開発で利用されています。しかし、StateGo自体の開発に掛ける時間は週末だけと大変限られた状態です。そのため、機能追加や修正が先行しており、その内容に関するドキュメント追加や過去記事の修正が間に合っていない状況です。特に、途中で用意したリファレンスは現状と合致しない部分が多少でており、大変申し訳なく思っています。このような状態も、Webツールの新調によりドキュメント作業のスピードを上げて解消していく予定です。今回のStateGoベータ１０リリースにあたり、StateGoユーザの方々が【迷わず習得できるようにするためにはどうすればよいのか？】を考え、少々の説明と関連ドキュメントのリンクを纏めてみました。どうぞご利用下さい。初めての方にチュートリアルは、UnityとRustが用意されています。他の言語もおおよそ同じことができるので、一読をお奨めします。各言語用にサンプルが準備されています。 Guthubをご覧ください。ティラノスクリプトについては、Qiitaの記事も参考下さい。以下、初心者向けの記事へのリンク集になります。【リファレンス内】StateGoの基本操作 リファレンス作成後の追加機能については対応していません。【リファレンス内】利用ガイド利用ガイドは、StateGo内の"?"マークより参照されています。リファレンス作成後の追加機能については対応していません。ステートマシンについてテンプレートと変換についてソース出力についてステートではないステート、組込みとコメント使いこなすためにコピーと継承LOOPとGOSUBVisual Studio Codeとの連携Visual Studio 2015,2017,2019との連携コピーコレクションもっと知りたくなった時に【Qiita】ゲーム業界の宿命的問題にアプローチする～汎用ビジュアルプログラミングツール開発のバックグランド仕様関連【リファレンス内】ステート【リファレンス内】アイテム名（項目名）【リファレンス内】関数テンプレート【リファレンス内】マクロ【リファレンス内】アウトプット【リファレンス内】SETTING操作【リファレンス内】マウス操作一覧【リファレンス内】ショートカット一覧
+			]]></description>
+			<pubDate>Sat, 20 Jun 2020 12:35:17 +0900</pubDate>
+			<guid isPermaLink="true">https://statego.programanic.com/v2test/entry25.html</guid>
+		</item>
+		<item>
+			<title>＆ｑｕｏｔ；分岐サンプル＆ｑｕｏｔ；　Ｓｔｅｐ－ｂｙ－ｓｔｅｐ　チュートリアル</title>
+			<link>https://statego.programanic.com/v2test/category2/category5/entry24.html</link>
+			<description><![CDATA[
+はじめにStateGoを理解して頂くために一ステップずつ解説するチュートリアルです。分岐処理を学習します。プログラム仕様これから作るプログラムの仕様は以下のとおりです。ランダムで１から１０の数字を一つ選択１の場合は"1st"２の場合は"2nd"３の場合は "3rd"４以降は "4th"と表現する。最終的に、 "You are XX." XXの部分に上記で作成した文字列が入る準備このチュートリアルは"Hello World" step-by-step チュートリアルからの続きになります。準備が出来てない場合は、最初の記事から実践して下さい。乱数の取得汎用の新規ステートを作成します。GET_RANDというステート名を与えます。乱数を保持して、以降のステートで使うため、メンバ変数 "m_val" を定義します。既に用意したテーブルの memberに宣言の式を入力します。[member]int m_val = 0;乱数関数 rand( a, b )を後から定義することとして、[update]に式を入力します。[update]m_val = rand(1,10);分岐の作成取得した数字で分岐する必要があります。GET_RANDステートをクリックするとメニューが表示されます。分岐作成を選択します。分岐エディタが表示されます。ダイアログの空欄でクリックしてメニューを表示して、新規の分岐を作成します。分岐条件は、プログラム式を入力します。分岐ダイアログをOKで閉じるとステートに分岐ボックスが追加されます。分岐別の処理分岐それぞれの処理を追加する。1stのステートの [update]に、以下のプログラムをに入力します。var o = new GameObject();o.AddComponent().text = "You are 1st";o.transform.position = Vector3.down;（"Hello World"の表示と重ならないようにしてあります。）以下、同様に。2nd用。var o = new GameObject();o.AddComponent().text = "You are 2nd";o.transform.position = Vector3.down;3rd用。var o = new GameObject();o.AddComponent().text = "You are 3rd";o.transform.position = Vector3.down;4以上。var o = new GameObject();o.AddComponent().text = string.Format("You are {0}th",m_val);o.transform.position = Vector3.down;矢印を下図のように接続します。変換保存と変換ボタンを押し、hoge_control.rsに出力します。rand関数の実装rand関数が実装されていなため、このまま実行はできません。TestContro.csをエディタで開き、rand関数を実装します。ただし、StateGoの挿入部の中に実装すると変換時に削除されます。挿入マーカ―外で実装します。※組込関数で実装することも可能ですが、変換結果の挿入部以外で定義できることを習得することを目的とします。int rand(int x, int y){　　var r = UnityEngine.Random.Range(x,y+1);　　return r;}実行UnityのPlayボタンを何度か実行して、正しくプログラムされていることを確認してください。アーカイブpsgg-unity-tutorialまとめここでは以下のことが習得できました。1. メンバ変数の定義2. 分岐方法3. ファイルを変更しての実装方法以上
+			]]></description>
+			<pubDate>Fri, 19 Jun 2020 21:21:02 +0900</pubDate>
+			<guid isPermaLink="true">https://statego.programanic.com/v2test/category2/category5/entry24.html</guid>
+		</item>
+		<item>
+			<title>＆ｑｕｏｔ；Ｈｅｌｌｏ　Ｗｏｒｌｄ＆ｑｕｏｔ；　Ｓｔｅｐ－ｂｙ－ｓｔｅｐ　チュートリアル</title>
+			<link>https://statego.programanic.com/v2test/category2/category5/entry23.html</link>
+			<description><![CDATA[
+はじめにStateGoを理解するために一ステップずつ解説するチュートリアルです。定番の『Hello Word』まずは、定番のHello Worldを表示するステートマシンを作成します。準備先の記事【新規作成からサンプルの実行まで】を実践し、Unityのセットアップ及びStateGoの初期サンプル実行に問題がないかを確認下さい。リセットTestControl.psggをダブルクリックして、StateGoを起動します。何もないところから覚えて頂きたいので、メニューバーの[ファイル]から[リセット]を選択して、STARTとENDだけの状態にします。ステート作成STARTステートとENDステートの真ん中あたりで、クリックしてメニューを表示させます。[新規作成]→[ステート]→[汎用(デフォルト)]を選択します。ステートが作成されます。ステート名とコメントステート上でクリックしてメニューを表示します。アイテム編集を選択します。このステートの定義内容がテーブルで表示されます。ステート名を入力したいので、２列目の[ステート]をクリックします。このステートに相応しそうなステート名　[PRINT_HELLO]を入力します。何がしたいのか詳細をコメントに入力します。 "定番のHello Worldを表示"プログラム入力一回だけ表示して、すぐに次のステートに遷移するので、[update]列にプログラムを入力しましょう。 (アイテム名と値についての関連は、解説の『テンプレートと変換について』をお読みください)gameObject.AddComponent().text = "Hello World";矢印の変更STARTステートの左から出てる赤丸をドラッグして、PRINT_HELLOステートの右端の緑丸にドロップします。PRINT_HELLOステートからENDステートへ矢印を追加します。プログラムの確認PRINT_HELLOステートをクリックしてみてください。左のソースパネルに変換結果が表示されます。STARTとENDをクリックすると同様に表示されます。変換左下の [保存と変換]ボタンを押すと変換結果が TestControl.csに出力されます。実行Unityのプレイボタンを押して実行します。まとめここでは以下のことが習得できました。１．ステートを作成する。２．ステート名とコメントを入力する３．プログラムを入力する４．矢印でつなげる５．変換する６．実行する以上
+			]]></description>
+			<pubDate>Fri, 19 Jun 2020 21:16:01 +0900</pubDate>
+			<guid isPermaLink="true">https://statego.programanic.com/v2test/category2/category5/entry23.html</guid>
+		</item>
+		<item>
+			<title>新規作成からサンプル実行まで</title>
+			<link>https://statego.programanic.com/v2test/category2/category5/entry22.html</link>
+			<description><![CDATA[
+はじめにUnity用の新規ステートマシンを作成した時のサンプルを動かす方法を紹介します。サンプルでは、LoopやGosub機能が使われています。StatGoを初めて使う方にはちょっと難しい内容となっています。そういう方は、環境整備と実行確認のみに使用して下さい。新規Unityプロジェクトの作成最初に新規のUnityプロジェクトを作成します。Unityプロジェクト直下にAssetsフォルダが作成されます。そこにStateGoのファイルを作成していきます。StateGoの新規作成１．StateGoを起動し、スタートダイアログの【新規ステートマシンの作成】ボタンを押し、新規作成ダイアログを開きます。２．スタートキット選択より、【C# Unity スタートキット】を選択します。３． ステートマシン名を　例として TestControlとします。４．ソース用フォルダパスに UniyプロジェクトのAssetsフォルダを指定します。5. 【作成】ボタンを押すStateGoの編集画面が開きます。画面上にはサンプルが表示されます。Assetsフォルダ直下に TestControl.cs と TestControl.psgg(StateGoデータファイル)が作成されます。サンプルのコンバート動作を確認するため、一度変換させましょう。ユーティリティパネル(画面左下)の【保存と変換】ボタンを押します。TestControl.csに変換結果が出力されます。サンプルコードのアタッチUnityのヒエラルキーパネルのコンテキストメニューにて Create Emptyを選択し、空のゲームオブジェクトを作成します。ゲームオブジェクト名をtestとします。プロジェクトウインドウの TestContro.csをドラッグして、testゲームオブジェクトに追加します。これで、実行前の作業は終了です。サンプルの実行本サンプルは、ログを出力するだけのものです。Unity の Playボタンを押すと、コンソールに結果が表示されます。サンプルフローの説明１．S_GOSUB - "This is A Subroutine"をコンソールに出力するサブルーチンを呼出します。２．S_LOOP   - ループ用の変数を検査し偶数(EVEN)か奇数(ODD)をコンソールに表示するサブルーチンを１０回繰り返します。まとめここでは以下のことが習得できました。1. Unity用ファイルの新規作成方法2. ゲームオブジェクトへ適用方法以上
+			]]></description>
+			<pubDate>Fri, 19 Jun 2020 11:36:36 +0900</pubDate>
+			<guid isPermaLink="true">https://statego.programanic.com/v2test/category2/category5/entry22.html</guid>
+		</item>
+		<item>
+			<title>サンプル</title>
+			<link>https://statego.programanic.com/v2test/entry21.html</link>
+			<description><![CDATA[
+Unity チュートリアルUnity 迷路自動生成Unity メニューサンプルUnity ゲームサンプル『Escape From Mars』Unity シンプルアニメーション
+			]]></description>
+			<pubDate>Thu, 18 Jun 2020 08:06:08 +0900</pubDate>
+			<guid isPermaLink="true">https://statego.programanic.com/v2test/entry21.html</guid>
+		</item>
+	</channel>
+</rss>
