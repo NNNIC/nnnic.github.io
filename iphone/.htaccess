@@ -15,7 +15,7 @@ ExpiresByType application/x-javascript "access plus 10 days"
 RewriteEngine Off
 RewriteEngine On
 RewriteCond %{HTTP_USER_AGENT} !(iPhone|iPod|Android.*Mobile|Windows.*Phone|BlackBerry)
-RewriteRule ^(.*)$ https://statego.programanic.com/v2test/$1 [R,L]
+RewriteRule ^(.*)$ https://nnnic.github.io/v2test/$1 [R,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !redirect\.php
 RewriteRule ^(.*)$ redirect.php?nf=$1 [L]

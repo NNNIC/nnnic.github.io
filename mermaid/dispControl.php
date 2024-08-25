@@ -177,7 +177,7 @@ class dispControl {
     function S_READFILE3($bFirst) {
         if ($bFirst)
         {
-            $this->data = file_get_contents('http://statego.programanic.com/mermaid/psgg2mermaid/conv.php?file=' . $this->file );
+            $this->data = file_get_contents('http://nnnic.github.io/mermaid/psgg2mermaid/conv.php?file=' . $this->file );
         }
         if ($this->HasNextState()==FALSE)
         {
